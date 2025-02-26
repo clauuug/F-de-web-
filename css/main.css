@@ -1,13 +1,19 @@
 /* Estilos básicos */
 body {
-	font-family: Arial, sans-serif;
-	background-color: #000000;
-	margin: 0;
-	padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffbfda;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 50%; /* Ajusta el tamaño según lo que necesites */
+  max-width: 300px; /* Evita que sea demasiado grande */
+  height: auto; /* Mantiene la proporción original */
 }
 
 h1,
 h2,
 h3 {
-	color: #000000;
+  color: #000000;
 }

@@ -1,0 +1,78 @@
+/* Fuente global */
+body {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* entre 300 y 700 */
+  font-style: normal;
+  color: #000000;
+  margin: 0;
+  padding: 1rem;
+}
+
+/* Titulares más llamativos */
+h1 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 1000;
+  text-align: center;
+  font-size: 3.8rem;
+  color: var(--accent-foreground);
+
+  animation: moveUp 2s ease-out forwards, colorCycle 3s ease-in-out;
+}
+
+/* Animación de aparición con desplazamiento */
+@keyframes moveUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animación de cambio de color (solo hasta rojo) */
+@keyframes colorCycle {
+  0% {
+    color: #ff002b;
+  } /* Rojo */
+  50% {
+    color: #ff7f00;
+  } /* Naranja */
+  100% {
+    color: #ff002b;
+  } /* Rojo (se queda así) */
+}
+
+/* Efecto de sombra al pasar el ratón */
+h1:hover {
+  text-shadow: 5px 5px 15px rgba(17, 0, 255, 0.3);
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+/* Texto ligero */
+.quicksand-light {
+  font-weight: 300;
+}
+
+/* Texto en negrita */
+.quicksand-bold {
+  font-weight: 700;
+}
+
+/* Personalizar el icono */
+.fa-face-smile {
+  font-size: 3rem;
+  color: #ff2e51;
+}
+
+/* Estilos para enlaces */
+a {
+  color: #0055cc;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #e91e63;
+}

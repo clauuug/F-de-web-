@@ -1,0 +1,168 @@
+/* ============================
+   NAV.CSS para ReCrearte
+   ============================ */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem 2rem;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.nav-izquierda {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-icon {
+  width: 110px;
+  height: auto;
+}
+
+.nav-icon img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Mostrar el logo negro en modo claro */
+.logo-claro {
+  display: block; /* El logo negro se muestra por defecto */
+}
+
+.logo-oscuro {
+  display: none; /* El logo blanco está oculto por defecto */
+}
+
+/* Cuando el checkbox está activado (modo oscuro), se oculta el logo negro y se muestra el blanco */
+#theme-toggle:checked ~ * .logo-claro {
+  display: none;
+}
+
+#theme-toggle:checked ~ * .logo-oscuro {
+  display: block;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-items li a {
+  font-family: var(--tipo-base);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--foreground);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-items li a:hover {
+  color: var(--accent);
+}
+
+/* Botón sesión */
+.btn-sesion {
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--accent);
+  border-radius: 50px;
+  background-color: transparent;
+  color: var(--foreground); /* Texto negro por defecto */
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-sesion:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Submenú */
+.menu-fase {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--card);
+  padding: 0.5rem 1rem;
+  box-shadow: var(--sombra-suave);
+  border: 1px solid var(--border);
+  list-style: none;
+  border-radius: 8px;
+  z-index: 10;
+  min-width: 160px;
+}
+
+.menu-fase:hover .submenu,
+.menu-fase:focus-within .submenu,
+.submenu:hover {
+  display: block;
+}
+
+.submenu li a {
+  display: block;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.submenu li a:hover {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+/* Toggle visual */
+.theme-toggle-button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  color: var(--foreground);
+  background-color: transparent;
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-button:hover {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.theme-toggle-button:before {
+  content: var(--toggle-shape);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .nav-items {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}

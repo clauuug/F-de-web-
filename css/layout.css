@@ -1,0 +1,66 @@
+/* ============================
+   LAYOUT.CSS PARA RECREARTE
+   ============================ */
+
+:root {
+  --foreground: #000000;
+  --accent: #f1a7a0;
+  --accent-foreground: #ffffff;
+}
+
+/* Estructura básica de la página */
+body {
+  font-family: var(--tipo-base, "montserrat", sans-serif);
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* HEADER */
+header {
+  height: var(--header-height);
+  background-color: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 100;
+}
+
+/* MAIN */
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* FOOTER */
+footer {
+  height: var(--footer-height);
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-xs);
+  margin-top: 3rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+nav.interno ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+nav.interno ul li a {
+  color: var(--foreground);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+}

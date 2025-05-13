@@ -1,0 +1,21 @@
+body {
+  font-family: var(--tipo-base);
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  font-size: var(--text-base);
+}
+
+h1 {
+  font-family: var(--tipo-titular);
+  font-size: var(--text-3xl);
+  font-weight: var(--peso-bold);
+  color: var(--color-acento);
+}
+a {
+  color: var(--color-texto);
+  transition: var(--transicion-suave);
+}
+
+a:hover {
+  color: var(--color-acento);
+}

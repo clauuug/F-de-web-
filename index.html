@@ -3,66 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FRANCIS BACON</title>
-    <meta
-      name="description"
-      content="Claudia Ugena, estudiante de Diseño Gráfico, comparte su aprendizaje y proyectos sobre diseño web, creatividad y desarrollo."
+    <title>ReCrearte</title>
+    <link rel="stylesheet" href="https://use.typekit.net/vfp8tuw.css" />
+    <link rel="stylesheet" href="css/root.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme-selector.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <meta
-      name="keywords"
-      content="Diseño Gráfico, desarrollo web, creatividad, proyectos, diseño visual, UX/UI"
-    />
-    <meta name="author" content="Claudia Ugena" />
-    <meta name="robots" content="index, follow" />
-    <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
-    <!-- Encabezado -->
-    <header>
-      <h1>FRANCIS BACON</h1>
-      <!-- Navegación  -->
-      <nav>
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Proyectos</a></li>
-          <li><a href="#">Contacto</a></li>
-        </ul>
-      </nav>
-    </header>
+    <input type="checkbox" id="theme-toggle" hidden />
 
-    <!-- Contenido principal -->
-    <main>
-      <!-- Sección de video -->
-      <section>
-        <h2>Mi exposición</h2>
-        <p>Aquí está un video sobre uno de mis proyectos.</p>
-        <video controls width="640">
-          <source src="assets/video/exposicion.mp4" type="video/mp4" />
-        </video>
-      </section>
-      <!-- Sección de imágen -->
-      <section>
-        <h2>Francis Bacon</h2>
-        <p>
-          Francis Bacon fue un pintor británico conocido por sus retratos
-          distorsionados y emotivos. Su estilo único ha influido profundamente
-          en el arte contemporáneo.
-        </p>
-        <img
-          src="assets/images/francis%20bacon.jpg"
-          alt="Francis Bacon"
-          class="francis-bacon-image"
-        />
-        <img
-          src="assets/images/FRANCIS%20BACON%202.jpg"
-          alt="Francis Bacon"
-          class="francis-bacon-image"
-        />
-      </section>
-    </main>
-    <!-- Pie de página -->
-    <footer>
-      <p>&copy; 2025 Claudia Ugena. Todos los derechos reservados.</p>
-    </footer>
+    <header class="navbar">
+      <!-- IZQUIERDA -->
+      <div class="nav-izquierda">
+        <div class="nav-icon">
+          <a href="index.html">
+            <!-- Logo negro para modo claro -->
+            <img
+              src="assets/images/logo-recrearte-negro.svg"
+              alt="Logo ReCrearte"
+              class="logo-claro"
+            />
+            <!-- Logo blanco para modo oscuro -->
+            <img
+              src="assets/images/logo-recrearte-blanco.svg"
+              alt="Logo ReCrearte blanco"
+              class="logo-oscuro"
+            />
+          </a>
+        </div>
+        <ul class="nav-items nav-items-izq">
+          <li class="menu-fase">
+            <a href="#">Fases</a>
+            <ul class="submenu">
+              <li><a href="#conocer">Conocer</a></li>
+              <li><a href="#explorar">Explorar</a></li>
+              <li><a href="#desbloquear">Desbloquear</a></li>
+            </ul>
+          </li>
+          <li><a href="#inspiracion">Inspiración</a></li>
+        </ul>
+      </div>
+
+      <!-- DERECHA -->
+      <ul class="nav-items nav-items-der">
+        <li><a href="#sobre">Sobre</a></li>
+        <li>
+          <label
+            for="theme-toggle"
+            class="theme-toggle-button"
+            aria-label="Cambiar tema visual"
+          ></label>
+        </li>
+        <li><a href="login.html" class="btn-sesion">Iniciar sesión</a></li>
+      </ul>
+    </header>
   </body>
 </html>

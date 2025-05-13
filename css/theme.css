@@ -1,0 +1,119 @@
+/* ============================
+   THEME.CSS PARA RECREARTE
+   ============================ */
+
+:root {
+  --toggle-shape: "\2600"; /* Sol Unicode */
+
+  --black: #000000;
+  --white: #f9f9f7;
+
+  --background: #f9f9f7;
+  --foreground: #000000;
+
+  --card: #ffffff;
+  --card-foreground: #000000;
+
+  --popover: #ffffff;
+  --popover-foreground: #000000;
+
+  --primary: #f1a7a0;
+  --primary-foreground: #ffffff;
+
+  --secondary: #f2f2f2;
+  --secondary-foreground: #000000;
+
+  --muted: #eaeaea;
+  --muted-foreground: #333333;
+
+  --accent: #f1a7a0;
+  --accent-foreground: #ffffff;
+
+  --destructive: #ff4d4f;
+  --destructive-foreground: #ffffff;
+
+  --border: #eaeaea;
+  --input: #eaeaea;
+  --ring: #f1a7a0;
+}
+
+/* === DARK MODE === */
+#theme-toggle:checked ~ * {
+  --toggle-shape: "\263E";
+
+  --black: #ffffff;
+  --white: #1a1a1a;
+
+  --background: #1a1a1a;
+  --foreground: #ffffff;
+
+  --card: #222222;
+  --card-foreground: #ffffff;
+
+  --popover: #2a2a2a;
+  --popover-foreground: #ffffff;
+
+  --primary: #f1a7a0;
+  --primary-foreground: #1a1a1a;
+
+  --secondary: #333333;
+  --secondary-foreground: #f9f9f7;
+
+  --muted: #444444;
+  --muted-foreground: #cccccc;
+
+  --accent: #f1a7a0;
+  --accent-foreground: #1a1a1a;
+
+  --destructive: #ff6b6b;
+  --destructive-foreground: #000000;
+
+  --border: #555555;
+  --input: #444444;
+  --ring: #f1a7a0;
+}
+
+/* Toggle Button Styling */
+.theme-toggle-button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  color: var(--foreground);
+  background-color: var(--background);
+  border-radius: 50px;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 1.5rem;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+.theme-toggle-button:before {
+  content: var(--toggle-shape);
+}
+
+/* Mostrar el logo negro en modo claro */
+.logo-claro {
+  display: block; /* El logo negro se muestra por defecto */
+}
+
+.logo-oscuro {
+  display: none; /* El logo blanco está oculto por defecto */
+}
+
+/* Mostrar el logo blanco en modo oscuro */
+#theme-toggle:checked ~ * .logo-claro {
+  display: none; /* Oculta el logo negro en modo oscuro */
+}
+
+#theme-toggle:checked ~ * .logo-oscuro {
+  display: block; /* Muestra el logo blanco en modo oscuro */
+}
+
+.logo {
+  filter: invert(0); /* Modo claro */
+}
+
+#theme-toggle:checked ~ * .logo {
+  filter: invert(1); /* Modo oscuro */
+}
+
+/* Removed invalid HTML code */

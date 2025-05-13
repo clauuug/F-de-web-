@@ -115,5 +115,3 @@
 #theme-toggle:checked ~ * .logo {
   filter: invert(1); /* Modo oscuro */
 }
-
-/* Removed invalid HTML code */

@@ -7,3 +7,7 @@
 @import url("types.css");
 @import url("base.css");
 @import url("nav.css");
+@import url("http://meyerweb.com/eric/tools/css/reset/reset.css"); /* CSS Reset para compatibilidad entre navegadores */
+@import "theme.css";
+@import url("main.css"); /* Estilos principales */
+@import url("./typography.css");

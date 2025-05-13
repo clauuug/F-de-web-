@@ -1,5 +1,5 @@
 /* ============================
-   NAV.CSS para ReCrearte
+   NAV.CSS PARA RECREARTE
    ============================ */
 
 .navbar {
@@ -13,12 +13,14 @@
   color: var(--foreground);
 }
 
+/* IZQUIERDA: Logo + Fases + Inspiración */
 .nav-izquierda {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
 
+/* Logo */
 .nav-icon {
   width: 110px;
   height: auto;
@@ -30,16 +32,19 @@
   transition: transform 0.3s ease;
 }
 
-/* Mostrar el logo negro en modo claro */
+.nav-icon:hover img {
+  transform: scale(1.05);
+}
+
 .logo-claro {
-  display: block; /* El logo negro se muestra por defecto */
+  display: block;
 }
 
 .logo-oscuro {
-  display: none; /* El logo blanco está oculto por defecto */
+  display: none;
 }
 
-/* Cuando el checkbox está activado (modo oscuro), se oculta el logo negro y se muestra el blanco */
+/* Logo cambia con el modo noche */
 #theme-toggle:checked ~ * .logo-claro {
   display: none;
 }
@@ -48,6 +53,7 @@
   display: block;
 }
 
+/* Menú general */
 .nav-items {
   display: flex;
   align-items: center;
@@ -72,25 +78,6 @@
   color: var(--accent);
 }
 
-/* Botón sesión */
-.btn-sesion {
-  padding: 0.4rem 1rem;
-  border: 1px solid var(--accent);
-  border-radius: 50px;
-  background-color: transparent;
-  color: var(--foreground); /* Texto negro por defecto */
-  font-size: var(--text-sm);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.btn-sesion:hover {
-  background-color: #000000;
-  color: #ffffff;
-}
-
 /* Submenú */
 .menu-fase {
   position: relative;
@@ -101,19 +88,17 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: var(--card);
+  background-color: var(--background);
   padding: 0.5rem 1rem;
-  box-shadow: var(--sombra-suave);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   border: 1px solid var(--border);
-  list-style: none;
   border-radius: 8px;
+  list-style: none;
   z-index: 10;
-  min-width: 160px;
 }
 
 .menu-fase:hover .submenu,
-.menu-fase:focus-within .submenu,
-.submenu:hover {
+.menu-fase:focus-within .submenu {
   display: block;
 }
 
@@ -128,8 +113,27 @@
 }
 
 .submenu li a:hover {
-  background-color: var(--primary);
-  color: var(--primary-foreground);
+  background-color: var(--secondary);
+  color: var(--accent);
+}
+
+/* Botón sesión */
+.btn-sesion {
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--accent);
+  border-radius: 50px;
+  background-color: transparent;
+  color: var(--foreground);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-sesion:hover {
+  background-color: #000000;
+  color: var(--background);
 }
 
 /* Toggle visual */
@@ -153,6 +157,7 @@
   content: var(--toggle-shape);
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;

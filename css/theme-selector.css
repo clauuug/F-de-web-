@@ -1,8 +1,8 @@
 /* ============================
    THEME-SELECTOR.CSS RECREARTE
-   ============================ */
+============================ */
 
-/* Tema claro por defecto (ReCrearte) */
+/* Tema claro */
 :root {
   --black: #000000;
   --white: #f9f9f7;
@@ -36,7 +36,7 @@
   --ring: #f1a7a0;
 }
 
-/* Tema oscuro al activar el checkbox con id="theme-toggle" */
+/* Tema oscuro */
 #theme-toggle:checked ~ * {
   --black: #ffffff;
   --white: #1a1a1a;
@@ -68,4 +68,22 @@
   --border: #555555;
   --input: #444444;
   --ring: #f1a7a0;
+}
+
+/* Mostrar el logo negro en modo claro */
+.logo-claro {
+  display: block;
+}
+
+.logo-oscuro {
+  display: none;
+}
+
+/* Mostrar el logo blanco en modo oscuro */
+#theme-toggle:checked ~ * .logo-claro {
+  display: none;
+}
+
+#theme-toggle:checked ~ * .logo-oscuro {
+  display: block;
 }

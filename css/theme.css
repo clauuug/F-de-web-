@@ -99,7 +99,6 @@
   display: none; /* El logo blanco está oculto por defecto */
 }
 
-/* Mostrar el logo blanco en modo oscuro */
 #theme-toggle:checked ~ * .logo-claro {
   display: none; /* Oculta el logo negro en modo oscuro */
 }

@@ -1,5 +1,5 @@
-@import url("base.css"); /* Estilos base generales */
 @import url("http://meyerweb.com/eric/tools/css/reset/reset.css"); /* Reset externo */
+@import url("base.css"); /* Estilos base generales */
 @import url("reset.css"); /* Reset interno */
 @import url("root.css"); /* Variables y configuraciones globales */
 @import url("typography.css"); /* Tipografía global */

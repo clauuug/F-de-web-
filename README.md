@@ -4,7 +4,7 @@
 
 ## Demo
 
-Puedes ver el sitio en vivo aquí:
+https://clauuug.github.io/F-de-web-/
 
 ## Características
 
@@ -32,5 +32,5 @@ Sigue estos pasos para obtener una copia local de este proyecto:
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/clauuug/tu-repositorio.git
+   git clone  https://github.com/clauuug/tu-repositorio.git
    ```

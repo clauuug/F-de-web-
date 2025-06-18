@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error 404 - Página no encontrada</title>
+    <style>
+      /* Estilos generales */
+      body {
+        font-family: "Montserrat", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--background, #f9f9f9);
+        color: var(--foreground, #333);
+      }
+
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        background-color: var(--background, #fff);
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      .logo-contenedor img {
+        max-height: 50px;
+      }
+
+      .error-page {
+        text-align: center;
+        padding: 6rem 2rem;
+      }
+
+      .error-container {
+        max-width: 600px;
+        margin: auto;
+      }
+
+      .titulo-principal {
+        font-family: "PPEditorialOld", serif;
+        font-size: 3rem;
+        font-style: italic;
+        margin-bottom: 1.5rem;
+      }
+
+      .intro {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+      }
+
+      .error-actions a {
+        display: inline-block;
+        margin: 0.5rem;
+        padding: 0.8rem 2rem;
+        border-radius: 2rem;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background 0.3s, color 0.3s;
+      }
+
+      .btn-principal {
+        background: var(--foreground, #c5a0ff);
+        color: var(--background, #fff);
+      }
+
+      .btn-secundario {
+        background: transparent;
+        color: var(--accent, #007bff);
+        border: 2px solid var(--accent, #007bff);
+      }
+
+      .btn-principal:hover,
+      .btn-secundario:hover {
+        transform: translateY(-2px) scale(1.04);
+      }
+
+      .footer-frame {
+        background-color: var(--background, #fff);
+        text-align: center;
+        padding: 1rem 0;
+      }
+
+      .footer p {
+        font-size: 0.9rem;
+        color: var(--foreground, #333);
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Encabezado -->
+    <header class="navbar">
+      <a href="index.html" class="nav-icon">
+        <div class="logo-contenedor">
+          <img
+            src="assets/images/logo-recrearte-negro.svg"
+            alt="Logo ReCrearte"
+            class="logo-claro"
+          />
+          <img
+            src="assets/images/logo-recrearte-blanco.svg"
+            alt="Logo ReCrearte blanco"
+            class="logo-oscuro"
+          />
+        </div>
+      </a>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="error-page">
+      <section class="error-container">
+        <h1 class="titulo-principal">Error 404</h1>
+        <p class="intro">
+          Lo sentimos, la página que buscas no existe o ha sido movida.
+        </p>
+        <div class="error-actions">
+          <a href="index.html" class="btn-principal">Volver al inicio</a>
+          <a href="sobre.html" class="btn-secundario"
+            >Conocer más sobre nosotros</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-frame">
+      <div class="footer">
+        <p>© 2025 ReCrearte. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>

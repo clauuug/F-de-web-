@@ -972,22 +972,3 @@ body.dark-mode .desbloquear-card {
   color: var(--accent);
   transform: translateY(-2px) scale(1.04);
 }
-.parallax-simple {
-  position: relative;
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  perspective: 1px; /* TRUCO PARALLAX SIN JS */
-  overflow: hidden;
-  background-color: var(--accent-color, #ffc); /* Cambia el color si quieres */
-  color: var(--foreground);
-}
-
-.parallax-inner {
-  transform: translateZ(0.4px) scale(0.96); /* Simula el parallax */
-  text-align: center;
-  padding: 2rem;
-  font-size: 1.5rem;
-  line-height: 1.5;
-}

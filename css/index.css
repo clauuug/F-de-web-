@@ -4,12 +4,9 @@
 @import url("root.css"); /* Variables y configuraciones globales */
 @import url("typography.css"); /* Tipografía global */
 @import url("types.css"); /* Tipos de texto o componentes relacionados */
-@import url("grids.css"); /* Grillas y layouts */
+@import url("grids.css"); /* Grids */
 @import url("nav.css"); /* Navegación */
 @import url("theme.css"); /* Temas y personalizaciones */
 @import url("main.css"); /* Estilos principales */
 @import url("layout.css"); /* Estructura general */
 @import url("media-queries.css"); /* Ajustes responsivos */
-@import url("parallax.css"); /* Efectos de parallax */
-@import url("test.css"); /* Estilos de prueba */
-@import url("typewriter.css"); /* Animaciones de máquina de escribir */

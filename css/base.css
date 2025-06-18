@@ -811,20 +811,24 @@ body.dark-mode .reto-card:hover {
   opacity: 0.7;
 }
 
-.btn-volver {
-  display: inline-block;
-  background: var(--accent);
-  color: var(--background);
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.1rem;
-  padding: 0.8rem 2.2rem;
-  border-radius: 2rem;
-  text-decoration: none;
-  font-weight: 600;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-  border: 2px solid var(--accent);
-  transition: background 0.3s, color 0.3s, border-color 0.2s, transform 0.2s;
+/* Modo claro: Mostrar logo claro y ocultar logo oscuro */
+body:not(.dark-mode) .logo-claro {
+  display: block;
 }
+
+body:not(.dark-mode) .logo-oscuro {
+  display: none;
+}
+
+/* Modo oscuro: Mostrar logo oscuro y ocultar logo claro */
+body.dark-mode .logo-claro {
+  display: none;
+}
+
+body.dark-mode .logo-oscuro {
+  display: block;
+}
+/* Removed stray 'display: inline-block;' property that was outside of a selector block */
 
 .btn-volver:hover,
 .btn-volver:focus {
@@ -874,4 +878,116 @@ h3 {
 
 .explorar-circulo:hover {
   transform: scale(1.1); 
+}
+
+/* =========================
+   DESBLOQUEARTE
+========================= */
+
+.desbloquearte {
+  padding: 6rem 8vw;
+  background: transparent !important;
+  color: var(--foreground);
+  text-align: center;
+}
+
+.titulo-principal {
+  font-family: "PPEditorialOld", serif;
+  font-size: 3rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.intro-desbloquear {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 4rem;
+  line-height: 1.6;
+  font-family: "Montserrat", sans-serif;
+}
+
+.desbloquear-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.desbloquear-card {
+  background: #fff;
+  border: 1.5px solid var(--accent);
+  border-radius: 1rem;
+  padding: 2rem;
+  color: #222;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+}
+
+body.dark-mode .desbloquear-card {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.desbloquear-card:hover {
+  background: var(--accent);
+  color: var(--background);
+  transform: translateY(-6px) scale(1.03);
+}
+
+.desbloquear-card h3 {
+  font-family: "PPEditorialOld", serif;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.desbloquear-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.volver-wrapper {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.btn-volver {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--background);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  padding: 0.8rem 2.2rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  border: 2px solid var(--accent);
+  transition: background 0.3s, color 0.3s, border-color 0.2s, transform 0.2s;
+}
+
+.btn-volver:hover {
+  background: var(--background);
+  color: var(--accent);
+  transform: translateY(-2px) scale(1.04);
+}
+.parallax-simple {
+  position: relative;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1px; /* TRUCO PARALLAX SIN JS */
+  overflow: hidden;
+  background-color: var(--accent-color, #ffc); /* Cambia el color si quieres */
+  color: var(--foreground);
+}
+
+.parallax-inner {
+  transform: translateZ(0.4px) scale(0.96); /* Simula el parallax */
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
 }

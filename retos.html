@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
+    <!-- Metadatos básicos -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,6 +35,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
+    <!-- Hojas de estilo -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/root.css" />
     <link rel="stylesheet" href="css/typography.css" />
@@ -45,33 +47,21 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/media-queries.css" />
-    <link rel="stylesheet" href="css/parallax.css" />
-    <link rel="stylesheet" href="css/typewriter.css" />
-    <link rel="stylesheet" href="css/test.css" />
-
-    <!-- Estilo temporal para depuración -->
-    <style>
-      .footer,
-      .footer-frame {
-        background: #fff !important;
-        color: #000 !important;
-        display: block !important;
-      }
-    </style>
   </head>
+
   <body>
-    <!-- Toggle Tema Visual -->
+    <!-- ========== TOGGLE TEMA DÍA / NOCHE (input oculto) ========== -->
     <input type="checkbox" id="theme-toggle" hidden />
 
-    <!-- NAV -->
+    <!-- ========== ENCABEZADO / HEADER (NAVEGACIÓN) ========== -->
     <header class="navbar" role="navigation">
-      <!-- Menú hamburguesa solo con CSS -->
+      <!-- Menú hamburguesa con CSS -->
       <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
       <label for="menu-toggle" class="menu-toggle" aria-label="Abrir menú">
         <i class="fa-solid fa-bars"></i>
       </label>
 
-      <!-- Logo centrado SIEMPRE -->
+      <!-- Logo centrado -->
       <a href="index.html" class="nav-icon">
         <div class="logo-contenedor">
           <img
@@ -101,7 +91,7 @@
         <li><a href="sobre.html">Sobre</a></li>
       </ul>
 
-      <!-- Acciones a la derecha -->
+      <!-- Acciones (modo oscuro y login) -->
       <div class="nav-actions">
         <label for="theme-toggle" class="theme-toggle-button">
           <i class="fas fa-sun"></i>
@@ -111,55 +101,60 @@
       </div>
     </header>
 
-    <section class="explorarte-retos">
-      <h2 class="titulo-principal">Explorar(te)</h2>
-      <p class="intro-retos">
-        A veces basta un pequeño impulso para encender tu chispa creativa. Te
-        proponemos algunos retos para que juegues, experimentes y explores sin
-        miedo.
-      </p>
+    <!-- ========== CONTENIDO PRINCIPAL DE LA PÁGINA ========== -->
+    <main>
+      <section class="explorarte-retos">
+        <h2 class="titulo-principal">Explorar(te)</h2>
+        <p class="intro-retos">
+          A veces basta un pequeño impulso para encender tu chispa creativa. Te
+          proponemos algunos retos para que juegues, experimentes y explores sin
+          miedo.
+        </p>
 
-      <div class="retos-grid">
-        <div class="reto-card">
-          <h3 class="reto-titulo">Reto 1</h3>
-          <p class="reto-texto">
-            Crea algo usando solo dos colores y una textura que te inspire.
-          </p>
+        <div class="retos-grid">
+          <div class="reto-card">
+            <h3 class="reto-titulo">Reto 1</h3>
+            <p class="reto-texto">
+              Crea algo usando solo dos colores y una textura que te inspire.
+            </p>
+          </div>
+          <div class="reto-card">
+            <h3 class="reto-titulo">Reto 2</h3>
+            <p class="reto-texto">
+              Dibuja o diseña con la mano no dominante durante 10 minutos.
+            </p>
+          </div>
+          <div class="reto-card">
+            <h3 class="reto-titulo">Reto 3</h3>
+            <p class="reto-texto">
+              Inventa un objeto imposible y haz un boceto rápido de él.
+            </p>
+          </div>
+          <div class="reto-card">
+            <h3 class="reto-titulo">Reto 4</h3>
+            <p class="reto-texto">
+              Reinterpreta una obra famosa como si fuese una escena futurista.
+            </p>
+          </div>
         </div>
-        <div class="reto-card">
-          <h3 class="reto-titulo">Reto 2</h3>
-          <p class="reto-texto">
-            Dibuja o diseña con la mano no dominante durante 10 minutos.
-          </p>
-        </div>
-        <div class="reto-card">
-          <h3 class="reto-titulo">Reto 3</h3>
-          <p class="reto-texto">
-            Inventa un objeto imposible y haz un boceto rápido de él.
-          </p>
-        </div>
-        <div class="reto-card">
-          <h3 class="reto-titulo">Reto 4</h3>
-          <p class="reto-texto">
-            Reinterpreta una obra famosa como si fuese una escena futurista.
-          </p>
-        </div>
-      </div>
 
-      <div class="boton-retos-wrapper">
-        <button class="boton-generar">Generar otro (prototipo)</button>
-      </div>
+        <div class="boton-retos-wrapper">
+          <button class="boton-generar">Generar otro (prototipo)</button>
+        </div>
 
-      <!-- Botón reutilizable para volver atrás -->
-      <div class="volver-wrapper">
-        <a href="explorar.html" class="btn-volver"> ← Volver a Explorar(te) </a>
-      </div>
-    </section>
-    <!-- CONTENEDOR EXTERNO DE ANCHO COMPLETO -->
+        <!-- Botón reutilizable para volver atrás -->
+        <div class="volver-wrapper">
+          <a href="explorar.html" class="btn-volver">
+            ← Volver a Explorar(te)
+          </a>
+        </div>
+      </section>
+    </main>
+    <!-- ========== PIE DE PÁGINA / FOOTER ========== -->
     <div class="footer-frame">
       <footer class="footer" role="contentinfo">
         <div class="footer-container">
-          <!-- LOGO -->
+          <!-- Logo del footer -->
           <div class="footer-logo">
             <img
               src="assets/images/logo-recrearte-negro.svg"
@@ -173,8 +168,9 @@
             />
           </div>
 
-          <!-- BLOQUES -->
+          <!-- Bloques de contenido del footer -->
           <div class="footer-bloques">
+            <!-- Secciones del sitio -->
             <div class="footer-secciones">
               <h4>Secciones</h4>
               <ul>
@@ -191,6 +187,7 @@
               </ul>
             </div>
 
+            <!-- Contacto -->
             <div class="footer-contacto">
               <h4>Contacto</h4>
               <ul>
@@ -214,18 +211,22 @@
           </div>
         </div>
 
+        <!-- Derechos -->
         <div class="footer-copyright">
           © 2025 ReCrearte. Todos los derechos reservados.
         </div>
       </footer>
     </div>
+
+    <!-- ========== SCRIPT TEMA OSCURO / CLARO ========== -->
     <script>
-      // Al cargar la página, aplica el modo guardado
+      // Aplica el tema oscuro si está activado en el almacenamiento local
       if (localStorage.getItem("dark-mode") === "true") {
         document.body.classList.add("dark-mode");
         document.getElementById("theme-toggle").checked = true;
       }
 
+      // Guarda el estado del toggle cuando cambia
       const toggle = document.getElementById("theme-toggle");
       toggle.addEventListener("change", function () {
         document.body.classList.toggle("dark-mode", this.checked);

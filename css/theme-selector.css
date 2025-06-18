@@ -70,22 +70,24 @@
   --ring: #f1a7a0;
 }
 
-/* Mostrar el logo negro en modo claro */
-.logo-claro {
-  display: block;
+/* Modo claro (por defecto) */
+body {
+  background-color: #ffffff;
+  color: #000000;
+  background-image: url("assets/images/fondo-recrearte.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.logo-oscuro {
-  display: none;
+/* Modo oscuro */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000000;
+    color: #ffffff;
+    background-image: url("assets/images/fondo-recrearte-temaoscuro.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
-
-/* Mostrar el logo blanco en modo oscuro */
-#theme-toggle:checked ~ * .logo-claro {
-  display: none;
-}
-
-#theme-toggle:checked ~ * .logo-oscuro {
-  display: block;
-}
-
-/* Removed invalid HTML code from CSS file */

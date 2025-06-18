@@ -294,3 +294,10 @@
     width: 100%;
   }
 }
+@media (max-width: 600px) {
+  .explorar-circulo {
+    width: 80px; /* Tamaño reducido para pantallas pequeñas */
+    height: 80px;
+    font-size: 0.9rem;
+  }
+}

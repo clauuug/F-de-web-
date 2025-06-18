@@ -117,6 +117,14 @@ a {
   color: #222;
   font-family: "Montserrat", sans-serif;
   min-height: 500px;
+  background: #fff;
+}
+
+.footer,
+.footer-frame {
+  background: #fff;
+  color: #000;
+  display: block;
 }
 
 .footer-container {

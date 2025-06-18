@@ -32,5 +32,5 @@ Sigue estos pasos para obtener una copia local de este proyecto:
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/tu-repositorio.git
+   git clone https://github.com/clauuug/tu-repositorio.git
    ```

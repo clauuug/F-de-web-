@@ -29,7 +29,7 @@ aside {
    GRIDS ESPECÍFICOS
 ========================= */
 
-/* Grid para la sección de objetivos */
+/*  objetivos */
 .grid-objetivos {
   display: flex;
   justify-content: center;
@@ -37,7 +37,7 @@ aside {
   gap: 2.5rem;
 }
 
-/* Grid para la sección de inspiración */
+/* inspiración */
 .inspiracion-grid {
   display: grid;
   grid-template-columns: repeat(
@@ -48,7 +48,7 @@ aside {
   justify-items: center;
 }
 
-/* Grid para la sección de retos */
+/* retos */
 .retos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -59,7 +59,7 @@ aside {
    GRIDS ADICIONALES
 ========================= */
 
-/* Grid de columnas fluidas */
+/* columnas fluidas */
 .fluid-columns {
   display: grid;
   grid-template-columns: clamp(24rem, 33.33vw + 0.99em, 54rem);
@@ -67,7 +67,7 @@ aside {
   padding: 1rem;
 }
 
-/* Grid de una sola columna */
+/* una sola columna */
 .single-column {
   display: grid;
   grid-template-columns: 1fr;
@@ -75,7 +75,7 @@ aside {
   padding: 1rem;
 }
 
-/* Contenedor de grid para tarjetas */
+/*  tarjetas */
 .grid-item.card {
   background-color: var(--card);
   padding: 1rem;
@@ -85,7 +85,7 @@ aside {
   gap: 0.5rem;
 }
 
-/* Grid para la sección de objetivos */
+/*objetivos */
 .grid-objetivos {
   display: flex;
   justify-content: center;
@@ -93,7 +93,7 @@ aside {
   gap: 2.5rem;
 }
 
-/* Grid para la sección "Sobre nosotros" */
+/* "Sobre nosotros" */
 .grid-sobre {
   display: flex;
   justify-content: center;
@@ -102,7 +102,7 @@ aside {
   margin-bottom: 3rem;
 }
 
-/* Grid para la sección de inspiración */
+/*  inspiración */
 .inspiracion-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -110,10 +110,16 @@ aside {
   justify-items: center;
 }
 
-/* Grid para la sección de retos */
+/*  retos */
 .retos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   background: transparent !important;
+} /* desbloquearte */
+.retos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
 }

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
+    <!-- Metadatos básicos -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,6 +35,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
+    <!-- Hojas de estilo -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/root.css" />
     <link rel="stylesheet" href="css/typography.css" />
@@ -45,33 +47,21 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/media-queries.css" />
-    <link rel="stylesheet" href="css/parallax.css" />
-    <link rel="stylesheet" href="css/typewriter.css" />
-    <link rel="stylesheet" href="css/test.css" />
-
-    <!-- Estilo temporal para depuración -->
-    <style>
-      .footer,
-      .footer-frame {
-        background: #fff !important;
-        color: #000 !important;
-        display: block !important;
-      }
-    </style>
   </head>
+
   <body>
-    <!-- Toggle Tema Visual -->
+    <!-- ========== TOGGLE TEMA DÍA / NOCHE (input oculto) ========== -->
     <input type="checkbox" id="theme-toggle" hidden />
 
-    <!-- NAV -->
+    <!-- ========== ENCABEZADO / HEADER (NAVEGACIÓN) ========== -->
     <header class="navbar" role="navigation">
-      <!-- Menú hamburguesa solo con CSS -->
+      <!-- Menú hamburguesa con CSS -->
       <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
       <label for="menu-toggle" class="menu-toggle" aria-label="Abrir menú">
         <i class="fa-solid fa-bars"></i>
       </label>
 
-      <!-- Logo centrado SIEMPRE -->
+      <!-- Logo centrado -->
       <a href="index.html" class="nav-icon">
         <div class="logo-contenedor">
           <img
@@ -101,7 +91,7 @@
         <li><a href="sobre.html">Sobre</a></li>
       </ul>
 
-      <!-- Acciones a la derecha -->
+      <!-- Acciones (modo oscuro y login) -->
       <div class="nav-actions">
         <label for="theme-toggle" class="theme-toggle-button">
           <i class="fas fa-sun"></i>
@@ -110,6 +100,8 @@
         <a href="login.html" class="btn-sesion">Iniciar sesión</a>
       </div>
     </header>
+
+    <!-- ========== CONTENIDO PRINCIPAL DE LA PÁGINA ========== -->
     <section class="inspiracion-section">
       <h1 class="titulo-principal-sobre">Explora nuevas órbitas creativas</h1>
       <p class="inspiracion-descripcion">
@@ -168,24 +160,25 @@
           <p class="nombre">SiteInspire</p>
         </a>
       </div>
-    </section>
-    <section class="tablero-inspiracion">
-      <h2 class="tablero-titulo">Tu tablero de inspiración</h2>
-      <p class="tablero-subtitulo">
-        Imagina un espacio solo tuyo. Aquí puedes reunir las ideas que descubres
-        navegando. Da el primer paso y crea tu propio tablero creativo.
-      </p>
+      <section class="tablero-inspiracion">
+        <h2 class="tablero-titulo">Tu tablero de inspiración</h2>
+        <p class="tablero-subtitulo">
+          Imagina un espacio solo tuyo. Aquí puedes reunir las ideas que
+          descubres navegando. Da el primer paso y crea tu propio tablero
+          creativo.
+        </p>
 
-      <button class="boton-tablero">Crear mi tablero</button>
+        <button class="boton-tablero">Crear mi tablero</button>
+      </section>
+      <div class="volver-wrapper">
+        <a href="explorar.html" class="btn-volver"> ← Volver a Explorar(te) </a>
+      </div>
     </section>
-    <div class="volver-wrapper">
-      <a href="explorar.html" class="btn-volver"> ← Volver a Explorar(te) </a>
-    </div>
-    <!-- CONTENEDOR EXTERNO DE ANCHO COMPLETO -->
+    <!-- ========== PIE DE PÁGINA / FOOTER ========== -->
     <div class="footer-frame">
       <footer class="footer" role="contentinfo">
         <div class="footer-container">
-          <!-- LOGO -->
+          <!-- Logo del footer -->
           <div class="footer-logo">
             <img
               src="assets/images/logo-recrearte-negro.svg"
@@ -199,8 +192,9 @@
             />
           </div>
 
-          <!-- BLOQUES -->
+          <!-- Bloques de contenido del footer -->
           <div class="footer-bloques">
+            <!-- Secciones del sitio -->
             <div class="footer-secciones">
               <h4>Secciones</h4>
               <ul>
@@ -217,6 +211,7 @@
               </ul>
             </div>
 
+            <!-- Contacto -->
             <div class="footer-contacto">
               <h4>Contacto</h4>
               <ul>
@@ -240,18 +235,22 @@
           </div>
         </div>
 
+        <!-- Derechos -->
         <div class="footer-copyright">
           © 2025 ReCrearte. Todos los derechos reservados.
         </div>
       </footer>
     </div>
+
+    <!-- ========== SCRIPT TEMA OSCURO / CLARO ========== -->
     <script>
-      // Al cargar la página, aplica el modo guardado
+      // Aplica el tema oscuro si está activado en el almacenamiento local
       if (localStorage.getItem("dark-mode") === "true") {
         document.body.classList.add("dark-mode");
         document.getElementById("theme-toggle").checked = true;
       }
 
+      // Guarda el estado del toggle cuando cambia
       const toggle = document.getElementById("theme-toggle");
       toggle.addEventListener("change", function () {
         document.body.classList.toggle("dark-mode", this.checked);

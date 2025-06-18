@@ -1,0 +1,119 @@
+/* =========================
+   GRIDS Y DISEÑOS
+========================= */
+
+/* Grid principal para la estructura de la página */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 1rem;
+  width: 100%;
+  height: 100vh;
+  grid-template-areas:
+    "content"
+    "sidebar";
+}
+
+/* Área principal de contenido */
+main {
+  grid-area: content;
+}
+
+/* Área de la barra lateral */
+aside {
+  grid-area: sidebar;
+}
+
+/* =========================
+   GRIDS ESPECÍFICOS
+========================= */
+
+/* Grid para la sección de objetivos */
+.grid-objetivos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+/* Grid para la sección de inspiración */
+.inspiracion-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(120px, 1fr)
+  ); /* Mantiene los elementos en filas */
+  gap: 2.5rem;
+  justify-items: center;
+}
+
+/* Grid para la sección de retos */
+.retos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* =========================
+   GRIDS ADICIONALES
+========================= */
+
+/* Grid de columnas fluidas */
+.fluid-columns {
+  display: grid;
+  grid-template-columns: clamp(24rem, 33.33vw + 0.99em, 54rem);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Grid de una sola columna */
+.single-column {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Contenedor de grid para tarjetas */
+.grid-item.card {
+  background-color: var(--card);
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Grid para la sección de objetivos */
+.grid-objetivos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+/* Grid para la sección "Sobre nosotros" */
+.grid-sobre {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en filas */
+  margin-bottom: 3rem;
+}
+
+/* Grid para la sección de inspiración */
+.inspiracion-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2.5rem;
+  justify-items: center;
+}
+
+/* Grid para la sección de retos */
+.retos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  background: transparent !important;
+}

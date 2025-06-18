@@ -1,21 +1,877 @@
-body {
-  font-family: var(--tipo-base);
-  color: var(--color-texto);
-  background-color: var(--color-fondo);
+/* =========================
+   HERO
+========================= */
+/* Sección destacada de la página principal. 
+ */
+.hero {
+  text-align: center;
+  padding: 6rem 1rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-family: "PPEditorialOld", serif;
+  font-weight: 200;
+  font-size: 5rem;
+  line-height: 1.1;
+  color: var(--foreground);
+  margin-bottom: 0.5rem;
+  text-transform: none;
+}
+
+.hero .destacado {
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: bold;
+  color: var(--accent);
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.hero .subtitulo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  margin: 2rem auto 5rem;
+  letter-spacing: 0.03em;
+  opacity: 0.5;
+  max-width: 75%;
+}
+
+/* =========================
+   BOTONES
+========================= */
+/* Estilos generales para botones reutilizables.*/
+.btn-principal {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  background-color: transparent;
+  border: 1px solid var(--foreground);
+  border-radius: 30px;
+  padding: 0.5rem 1.5rem;
+  font-size: var(--text-sm);
+  color: var(--foreground);
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  margin-top: 6rem;
+}
+
+.btn-principal:hover {
+  background-color: var(--accent);
+  color: var(--background);
+  border-color: var(--accent);
+}
+
+.btn-empezar {
+  display: inline-block;
+  background: var(--primary);
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  padding: 0.7rem 2.2rem;
+  font-size: 1.15rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, box-shadow 0.2s;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  text-decoration: none;
+  margin-top: 2rem;
+}
+
+.btn-empezar:hover,
+.btn-empezar:focus {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.btn-circular {
+  background-color: var(--foreground);
+  color: var(--background);
+  border: 1px solid var(--foreground);
+  padding: 0.7rem 1.8rem;
+  border-radius: 50px;
   font-size: var(--text-base);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
 }
 
-h1 {
-  font-family: var(--tipo-titular);
-  font-size: var(--text-3xl);
-  font-weight: var(--peso-bold);
-  color: var(--color-acento);
-}
-a {
-  color: var(--color-texto);
-  transition: var(--transicion-suave);
+.btn-circular:hover {
+  background-color: var(--accent);
+  color: white;
+  border-color: var(--accent);
 }
 
-a:hover {
-  color: var(--color-acento);
+.btn-secundario {
+  background-color: var(--green);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 0.4rem 1.2rem;
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  margin-top: 3rem;
+}
+
+.btn-secundario:hover {
+  background-color: var(--foreground);
+  color: var(--background);
+}
+
+.btn-sesion {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn-sesion:hover,
+a.btn-sesion:hover {
+  background: var(--primary);
+  color: #000; /* Texto negro para contraste */
+  border-color: var(--primary);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* =========================
+   OBJETIVOS Y GRIDS
+========================= */
+/* Estilos específicos para la sección de objetivos. */
+.objetivos {
+  padding: 6rem 1rem 4rem;
+  text-align: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.texto-objetivos {
+  padding: 1rem 0;
+  margin: 0;
+  text-align: center;
+}
+
+.texto-objetivos h2 {
+  font-size: 2rem;
+  font-family: "PPEditorialOld", serif;
+  line-height: 1.2;
+  margin-bottom: -6rem;
+  text-transform: none;
+}
+
+.logo-inline {
+  display: block;
+  margin: 0 auto;
+  height: 8em;
+}
+
+.texto-objetivos .logo-inline {
+  margin-top: 4;
+}
+
+.texto-objetivos p {
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--text-xs);
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  letter-spacing: 0.05em;
+}
+
+.objetivo {
+  width: 250px;
+  height: 250px;
+  border: 1px dashed var(--foreground);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.objetivo:hover {
+  background-color: var(--accent);
+  color: var(--background);
+  border-color: var(--accent);
+}
+
+.objetivo h3 {
+  font-family: "PPEditorialOld", serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: var(--text-base);
+  margin-bottom: 0.5rem;
+}
+
+.objetivo p {
+  font-size: var(--text-xs);
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* =========================
+   INICIO PASOS
+========================= */
+/* Estilos específicos para la sección de pasos. */
+.inicio-pasos {
+  padding: 6rem 1rem 4rem;
+  text-align: center;
+}
+
+.inicio-pasos h2 {
+  font-family: "PPEditorialOld", serif;
+  font-size: 5rem;
+  font-weight: 200;
+  text-transform: none;
+  margin-bottom: 5rem;
+}
+
+.pasos {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.paso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.paso h3 {
+  font-size: 0.5rem; 
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.numero {
+  font-size: var(--text-base);
+  font-family: "PPEditorialOld", serif;
+  font-weight: 200;
+}
+
+/* =========================
+   PREGUNTA Y ENLACES
+========================= */
+/* Estilos para preguntas y enlaces relacionados. */
+.pregunta {
+  font-size: 0.75rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  margin-top: 1rem;
+  color: var(--foreground);
+}
+
+.pregunta a {
+  color: var(--foreground);
+  text-decoration: underline;
+}
+
+/* =========================
+   SOBRE
+========================= */
+/* Estilos específicos para la sección "Sobre". */
+.sobre {
+  max-width: 1200px;
+  margin: auto;
+  padding: 6rem 2rem 4rem;
+  text-align: center;
+}
+
+.titulo-principal-sobre {
+  font-family: "PPEditorialOld", serif;
+  font-style: italic;
+  font-size: 4rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 7rem;
+  margin-bottom: 5rem;
+  color: var(--foreground);
+}
+
+.bloque-sobre {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px dashed var(--foreground);
+  padding: 2rem;
+  width: 300px;
+  border-radius: 20px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.bloque-sobre:hover {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.bloque-sobre h3 {
+  font-family: "PPEditorialOld", serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.bloque-sobre p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.sobre .btn-secundario {
+  margin-top: 2rem;
+}
+
+/* =========================
+   MODO OSCURO
+========================= */
+body.dark-mode {
+  --foreground: #ffffff;
+  --background: #121212;
+  --accent: #fbf2e8;
+  --green: #65c18c;
+  background-image: url("../assets/images/fondo-recrearte-temaoscuro.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+}
+
+body.dark-mode .pregunta a {
+  color: #ffffff;
+}
+
+.logo-claro {
+  display: block;
+}
+
+.logo-oscuro {
+  display: none;
+}
+
+body.dark-mode .logo-claro {
+  display: none;
+}
+
+body.dark-mode .logo-oscuro {
+  display: block;
+}
+
+body.dark-mode .footer {
+  background: rgba(18, 18, 18, 0.94);
+  border-top: 2px solid var(--accent, #fbf2e8);
+  color: var(--foreground);
+}
+
+/* MODO OSCURO FOOTER */
+body.dark-mode .footer-frame {
+  background: #18181b !important; /* Fondo oscuro para el footer */
+  border-top: 2px solid var(--accent, #f1a7a0);
+}
+
+body.dark-mode .footer {
+  background: transparent !important; /* Elimina fondo blanco si lo hubiera */
+  color: var(--foreground);
+}
+
+body.dark-mode .footer-secciones a,
+body.dark-mode .footer-contacto a {
+  color: #fff !important;
+}
+
+body.dark-mode .footer-secciones a:hover,
+body.dark-mode .footer-contacto a:hover {
+  color: var(--accent) !important;
+}
+
+
+/* =========================
+   INSPIRACIÓN
+========================= */
+
+.inspiracion-section {
+  padding: 6rem 8vw;
+  text-align: center;
+}
+
+.inspiracion-titulo {
+  font-family: "PPEditorialOld", serif;
+  font-size: 4rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+.inspiracion-descripcion {
+  font-family: var(--tipo-base);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  color: var(--foreground);
+}
+
+.inspiracion-card {
+  text-decoration: none;
+  color: var(--foreground);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.inspiracion-card:hover {
+  transform: scale(1.08);
+}
+
+.icono {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--foreground);
+  color: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.inspiracion-card:hover .icono {
+  background-color: var(--accent);
+  color: var(--background);
+}
+
+.nombre {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: var(--tipo-base);
+}
+
+.tablero-inspiracion {
+  margin-top: 5rem;
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--background);
+  border-top: 1px solid var(--foreground);
+}
+
+.tablero-titulo {
+  font-family: "PPEditorialOld", serif;
+  font-size: 2rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  color: var(--foreground);
+}
+
+.tablero-subtitulo {
+  font-size: 1rem;
+  font-family: var(--tipo-base);
+  max-width: 500px;
+  margin: 0 auto 2rem;
+  color: var(--foreground);
+}
+
+.boton-tablero {
+  font-size: 0.95rem;
+  font-family: var(--tipo-base);
+  padding: 0.7rem 1.6rem;
+  background-color: transparent;
+  color: var(--foreground);
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.boton-tablero:hover {
+  background-color: var(--accent);
+  color: var(--background);
+}
+
+.tablero-inspiracion {
+  margin-top: 5rem;
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.6); /* Blanco con opacidad */
+  border-top: 1px solid var(--foreground);
+  backdrop-filter: blur(6px); 
+}
+
+/* =========================
+   CUESTIONARIO CONOCER(TE)
+========================= */
+
+.cuestionario {
+  padding: 6rem 5vw;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: "Montserrat", sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.cuestionario h2 {
+  font-size: 2.2rem;
+  font-family: "PPEditorialOld", serif;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.cuestionario .intro {
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+.formulario ol {
+  counter-reset: pregunta;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.formulario li {
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+  position: relative;
+}
+
+.formulario li::before {
+  counter-increment: pregunta;
+  content: counter(pregunta) ". ";
+  font-weight: bold;
+  margin-right: 0.3rem;
+  color: var(--accent);
+}
+
+.formulario label {
+  display: block;
+  margin-left: 1.2rem;
+  margin-top: 0.4rem;
+  cursor: pointer;
+  font-size: 0.98rem;
+  transition: color 0.2s;
+}
+
+.formulario input[type="radio"] {
+  margin-right: 0.6rem;
+  accent-color: var(--accent);
+}
+
+.boton-analisis {
+  margin-top: 3rem;
+  padding: 0.9rem 2rem;
+  background-color: var(--accent);
+  color: #000;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.boton-analisis:hover {
+  background-color: var(--foreground);
+  color: var(--background);
+  border: 2px solid var(--accent);
+}
+
+.analisis-creativo {
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid var(--accent);
+  font-size: 1rem;
+  max-width: 700px;
+  line-height: 1.6;
+  border-radius: 8px;
+  display: block;
+}
+
+/* =========================
+   ANÁLISIS CREATIVO
+========================= */
+
+.analisis-texto {
+  max-width: 800px;
+  margin: 7rem auto 2rem auto;
+  padding: 0 2rem 2rem 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--foreground);
+  background-color: rgba(255, 255, 255, 0.85);
+  border-left: 4px solid var(--accent);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+.analisis-texto h2,
+.analisis-texto h3 {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.analisis-basado {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.95rem;
+  color: var(--foreground);
+  opacity: 0.7;
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.analisis-texto p {
+  margin-bottom: 1.6rem;
+  font-style: normal;
+}
+
+.analisis-aviso {
+  text-align: center;
+  font-size: 0.9rem;
+  font-family: "Montserrat", sans-serif;
+  color: var(--foreground);
+  opacity: 0.6;
+  margin-top: 2rem;
+  padding: 0 1.5rem;
+}
+
+.titulo-principal {
+  font-family: "PPEditorialOld", serif;
+  font-style: italic;
+  font-size: 4rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 7rem;
+  margin-bottom: 5rem;
+  color: var(--foreground);
+}
+
+/* =========================
+   EXPLORARTE RETOS
+========================= */
+
+.explorarte-retos {
+  padding: 6rem 8vw;
+  background: transparent !important;
+  color: var(--foreground);
+  transition: background 0.3s;
+  text-align: center;
+}
+
+.intro-retos {
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.reto-card {
+  background: #fff !important;
+  border: 1.5px solid var(--accent);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: background 0.3s, color 0.3s, border-color 0.3s, transform 0.3s;
+  color: #222;
+}
+
+body.dark-mode .reto-card {
+  background: var(--background) !important;
+  color: #fff !important;
+}
+
+.reto-card:hover,
+body.dark-mode .reto-card:hover {
+  background: var(--accent) !important;
+  color: #fff !important;
+  border-color: var(--accent);
+  transform: translateY(-6px) scale(1.03);
+}
+
+.reto-titulo {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-family: "PPEditorialOld", serif;
+}
+
+.reto-texto {
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.boton-retos-wrapper {
+  margin-top: 4rem;
+}
+
+.boton-generar {
+  background-color: transparent;
+  border: 2px solid var(--accent);
+  padding: 0.8rem 2rem;
+  border-radius: 999px;
+  color: var(--foreground);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  cursor: not-allowed;
+  transition: all 0.3s ease;
+}
+
+.boton-generar:hover {
+  background-color: var(--accent);
+  color: var(--background);
+}
+.explorarte-home {
+  text-align: center;
+  padding: 6rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.titulo-principal {
+  font-family: "PPEditorialOld", serif;
+  font-size: 3rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.intro-explorar {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 4rem;
+  line-height: 1.6;
+  font-family: "Montserrat", sans-serif;
+}
+
+.explorar-circulo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: var(--background);
+  border: 2px solid var(--accent);
+  color: var(--foreground);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "PPEditorialOld", serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: background 0.4s ease, color 0.4s ease, transform 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.explorar-circulo:hover {
+  background-color: var(--accent);
+  color: var(--background);
+  transform: scale(1.05);
+}
+
+.explorarte-home,
+.explorarte-retos {
+  padding-bottom: 25rem; /
+}
+
+.volver-wrapper {
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+}
+
+.volver-titulo {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.03em;
+  opacity: 0.7;
+}
+
+.btn-volver {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--background);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  padding: 0.8rem 2.2rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  border: 2px solid var(--accent);
+  transition: background 0.3s, color 0.3s, border-color 0.2s, transform 0.2s;
+}
+
+.btn-volver:hover,
+.btn-volver:focus {
+  background: var(--background);
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* =========================
+   PERSONALIZACIONES MODO OSCURO
+========================= */
+body.dark-mode .tablero-subtitulo,
+body.dark-mode .tablero-titulo {
+  color: #18181b !important;
+}
+
+/* Estilo general para h3 */
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--foreground); 
+}
+
+.explorar-circulos {
+  display: flex;
+  justify-content: center; 
+  gap: 2rem; 
+  flex-wrap: nowrap; 
+}
+
+.explorar-circulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 150px; 
+  height: 150px; 
+  border-radius: 50%; 
+  background-color: var(--accent); 
+  color: var(--accent-foreground); 
+  text-decoration: none; 
+  font-size: 1.2rem; 
+  transition: transform 0.3s ease; 
+}
+
+.explorar-circulo:hover {
+  transform: scale(1.1); 
 }

@@ -17,7 +17,7 @@
   --popover-foreground: #000000;
 
   --primary: #f1a7a0;
-  --primary-foreground: #ffffff;
+  --primary-foreground: #303030;
 
   --secondary: #f2f2f2;
   --secondary-foreground: #000000;
@@ -87,3 +87,5 @@
 #theme-toggle:checked ~ * .logo-oscuro {
   display: block;
 }
+
+/* Removed invalid HTML code from CSS file */

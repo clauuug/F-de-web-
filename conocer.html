@@ -110,79 +110,137 @@
         <a href="login.html" class="btn-sesion">Iniciar sesión</a>
       </div>
     </header>
-    <!-- HERO -->
-    <section class="hero">
-      <h1>Estás a un clic de <span class="destacado">volver a fluir</span></h1>
-      <p class="subtitulo">
-        La web que desbloquea tu proceso creativo paso a paso.
+    <!-- Título principal fuera de la caja -->
+    <h2 class="titulo-principal">Conocer(te)</h2>
+
+    <section class="cuestionario" id="cuestionario">
+      <p class="intro">
+        Antes de desbloquear tu creatividad, tómate un momento para conocerte.
+        Responde con sinceridad este breve cuestionario.
       </p>
-      <a href="login.html" class="btn-principal">Registrarte ahora</a>
-      <p class="pregunta">
-        ¿Ya tienes una cuenta?
-        <a href="login.html" class="link">Inicia sesión ahora</a>
-      </p>
-    </section>
+      <form action="analisis.html" class="formulario">
+        <ol>
+          <li>
+            ¿A qué hora del día te sientes más inspirado/a?
+            <label><input type="radio" name="q1" required /> Mañana</label>
+            <label><input type="radio" name="q1" /> Tarde</label>
+            <label><input type="radio" name="q1" /> Noche</label>
+          </li>
 
-    <!-- OBJETIVOS -->
-    <section class="objetivos">
-      <div class="texto-objetivos">
-        <h2>Te ayudamos a</h2>
-        <img
-          src="assets/images/logo-recrearte-negro.svg"
-          alt="ReCrearte"
-          class="logo-inline logo-claro"
-        />
-        <img
-          src="assets/images/logo-recrearte-blanco.svg"
-          alt="ReCrearte blanco"
-          class="logo-inline logo-oscuro"
-        />
-        <p>Objetivos que vas a cumplir</p>
-      </div>
+          <li>
+            ¿Cuál es tu mayor bloqueo creativo?
+            <label
+              ><input type="radio" name="q2" required /> Miedo al error</label
+            >
+            <label><input type="radio" name="q2" /> Falta de ideas</label>
+            <label><input type="radio" name="q2" /> Perfeccionismo</label>
+          </li>
 
-      <div class="grid-objetivos">
-        <div class="objetivo">
-          <h3><em>Reconectar</em></h3>
-          <p>contigo a través del arte y la reflexión.</p>
-        </div>
-        <div class="objetivo">
-          <h3><em>Liberar</em></h3>
-          <p>bloqueos creativos con ejercicios y estímulos visuales.</p>
-        </div>
-        <div class="objetivo">
-          <h3><em>Transformar</em></h3>
-          <p>ideas en proyectos que tengan voz propia.</p>
-        </div>
-      </div>
-    </section>
+          <li>
+            ¿Qué te motiva a crear?
+            <label
+              ><input type="radio" name="q3" required /> Expresar
+              emociones</label
+            >
+            <label><input type="radio" name="q3" /> Resolver problemas</label>
+            <label><input type="radio" name="q3" /> Conectar con otros</label>
+          </li>
 
-    <!-- PASOS -->
-    <section class="inicio-pasos">
-      <h2>¿Por dónde empiezo?</h2>
-      <div class="pasos">
-        <div class="paso">
-          <p class="numero">1º</p>
-          <a href="conocer.html" class="btn-circular">
-            <i class="fa-solid fa-handshake"></i>
-            Conocer(te)
-          </a>
-        </div>
-        <div class="paso">
-          <p class="numero">2º</p>
-          <a href="explorar.html" class="btn-circular">
-            <i class="fa-regular fa-eye"></i>
-            Explorar(te)
-          </a>
-        </div>
-        <div class="paso">
-          <p class="numero">3º</p>
-          <a href="desbloquear.html" class="btn-circular">
-            <i class="fa-solid fa-lock-open"></i>
-            Desbloquear(te)
-          </a>
-        </div>
-      </div>
-      <a href="conocer.html" class="btn-empezar">Empezar ahora</a>
+          <li>
+            ¿Cómo reaccionas ante un proyecto sin instrucciones claras?
+            <label><input type="radio" name="q4" required /> Me agobio</label>
+            <label
+              ><input type="radio" name="q4" /> Lo veo como una
+              oportunidad</label
+            >
+            <label
+              ><input type="radio" name="q4" /> Busco referencias antes de
+              actuar</label
+            >
+          </li>
+
+          <li>
+            ¿Con qué frecuencia experimentas con técnicas nuevas?
+            <label
+              ><input type="radio" name="q5" required /> Muy a menudo</label
+            >
+            <label
+              ><input type="radio" name="q5" /> Solo cuando es necesario</label
+            >
+            <label><input type="radio" name="q5" /> Casi nunca</label>
+          </li>
+
+          <li>
+            ¿Cuál es tu entorno ideal para crear?
+            <label
+              ><input type="radio" name="q6" required /> Silencio
+              absoluto</label
+            >
+            <label><input type="radio" name="q6" /> Música de fondo</label>
+            <label><input type="radio" name="q6" /> Espacios compartidos</label>
+          </li>
+
+          <li>
+            ¿Te comparas con otros/as al crear?
+            <label
+              ><input type="radio" name="q7" required /> Sí, demasiado</label
+            >
+            <label><input type="radio" name="q7" /> A veces</label>
+            <label
+              ><input type="radio" name="q7" /> No, tengo mi propio
+              camino</label
+            >
+          </li>
+
+          <li>
+            ¿Qué haces cuando no te gusta lo que has creado?
+            <label><input type="radio" name="q8" required /> Lo abandono</label>
+            <label><input type="radio" name="q8" /> Lo reformulo</label>
+            <label
+              ><input type="radio" name="q8" /> Lo guardo para más
+              adelante</label
+            >
+          </li>
+
+          <li>
+            ¿Qué valoras más en el proceso creativo?
+            <label><input type="radio" name="q9" required /> La libertad</label>
+            <label><input type="radio" name="q9" /> El orden</label>
+            <label><input type="radio" name="q9" /> La sorpresa</label>
+          </li>
+
+          <li>
+            ¿Sientes que conoces tu estilo personal?
+            <label
+              ><input type="radio" name="q10" required /> Sí, muy
+              definido</label
+            >
+            <label
+              ><input type="radio" name="q10" /> Lo estoy descubriendo</label
+            >
+            <label
+              ><input type="radio" name="q10" /> No tengo ni idea aún</label
+            >
+          </li>
+        </ol>
+
+        <button type="submit" class="boton-analisis">Ver tu análisis</button>
+      </form>
+
+      <section id="analisis" class="analisis-creativo">
+        <h3>¿Quieres saber en qué punto estás creativamente?o</h3>
+        <p>
+          Después de responder al cuestionario, pulsa en "Ver tu análisis" para
+          obtener una evaluación personalizada que te ayudará a entender mejor
+          tu situación actual. Descubre si estás en una etapa de
+          autoconocimiento, exploración o desbloqueo, y sigue avanzando en tu
+          proceso creativo.
+        </p>
+        <p>
+          Te invitamos a seguir con la fase "Explorar(te)" para expandir tu
+          universo creativo.
+        </p>
+      </section>
     </section>
     <!-- CONTENEDOR EXTERNO DE ANCHO COMPLETO -->
     <div class="footer-frame">

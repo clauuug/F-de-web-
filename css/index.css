@@ -1,13 +1,15 @@
-/* ============================
-   IMPORTACIÓN DE ARCHIVOS CSS
-   ============================ */
-
-@import url("reset.css");
-@import url("root.css");
-@import url("types.css");
-@import url("base.css");
-@import url("nav.css");
-@import url("http://meyerweb.com/eric/tools/css/reset/reset.css"); /* CSS Reset para compatibilidad entre navegadores */
-@import "theme.css";
+@import url("base.css"); /* Estilos base generales */
+@import url("http://meyerweb.com/eric/tools/css/reset/reset.css"); /* Reset externo */
+@import url("reset.css"); /* Reset interno */
+@import url("root.css"); /* Variables y configuraciones globales */
+@import url("typography.css"); /* Tipografía global */
+@import url("types.css"); /* Tipos de texto o componentes relacionados */
+@import url("grids.css"); /* Grillas y layouts */
+@import url("nav.css"); /* Navegación */
+@import url("theme.css"); /* Temas y personalizaciones */
 @import url("main.css"); /* Estilos principales */
-@import url("./typography.css");
+@import url("layout.css"); /* Estructura general */
+@import url("media-queries.css"); /* Ajustes responsivos */
+@import url("parallax.css"); /* Efectos de parallax */
+@import url("test.css"); /* Estilos de prueba */
+@import url("typewriter.css"); /* Animaciones de máquina de escribir */
